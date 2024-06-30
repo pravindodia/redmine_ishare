@@ -2,6 +2,6 @@
 en:
   ishare_label_module: 'Issue shared access'
   label_ishare: "iShare"
-  label_ishare_new: 'Shared anonym'
+  label_ishare_new: 'Create Share Link'
   label_granted: "Issued accesses"
   ishare_title_create: 'Create new shared access'

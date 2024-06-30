@@ -8,11 +8,11 @@
 
 module IshareHelper
   include IssuesHelper
-  include AdditionalTagsHelper
+#  include AdditionalTagsHelper
   include AttachmentsHelper
   include WatchersHelper
   include QueriesHelper
-  include AdditionalTagsHelper
+#  include AdditionalTagsHelper
 
   #include ActionView::Helpers::UrlHelper
   include ActionView::Helpers::FormTagHelper

@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'ishare.sidebar', :plugin => 'redmine_ishare' %>
+<%=  stylesheet_link_tag 'ishare.sidebar', :plugin => 'redmine_ishare' %>
 
 <%
   # @todo хз как сделать правильно , чтобы сайд бар не отображался если не залогинен. не через шаблон
@@ -6,7 +6,7 @@
   return if (params[:controller] != 'issues')
   return if (params[:controller] == 'issues' && params[:action] == 'index')
 
-  ishare_prepare
+  @ishare_prepare
 %>
 
 <h3><%= l(:label_ishare)%></h3>
@@ -20,7 +20,15 @@
       <span aria-hidden="true" class="icon icon-add"></span>
       <span><%= l(:label_ishare_new)%></span>
         <span class="icon-button__badge" id="ishare__badge_<%= @issue.id %>">
-          <%= @ishare[:items].length %>
+          <%= 
+Rails.logger.info "Debug"
+Rails.logger.info @ishare.to_json
+   if @ishare != nil 
+     @ishare[:items].length
+   else 
+    0 
+   end
+%>
         </span>
     <% end %>
   </li>
