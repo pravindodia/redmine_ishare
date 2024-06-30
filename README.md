@@ -1,10 +1,13 @@
 # Redmine iShare
 
+# Note:
+
+Removed Dependency of AdditonalTags
+
 Plugin for redmine.
 Allows you to open access to a specific task in read mode for an anonymous user
 
-Redmine.org plugin page: https://www.redmine.org/plugins/redmine_ishare
-Github: https://github.com/JKeySZR/redmine_ishare
+Github: https://github.com/pravindodia/redmine_ishare
 
 ## Features
 
@@ -29,7 +32,7 @@ How it looks inside Redmine
 
 ## Getting the plugin
 
-A copy of the plugin can be downloaded from [GitHub](https://github.com/JKeySZR/redmine_ishare)
+A copy of the plugin can be downloaded from [GitHub](https://github.com/pravindodia/redmine_ishare)
 
 ## Installation
 
@@ -37,7 +40,7 @@ To install the plugin clone the repo from github and migrate the database:
 
 ```
 $ cd $REDMINE_ROOT
-$ git clone -b stable https://github.com/JKeySZR/redmine_ishare.git plugins/redmine_ishare
+$ git clone https://github.com/pravindodia/redmine_ishare plugins/redmine_ishare
 $ bundle config set --local without 'development test'
 $ bundle install
 $ bundle exec rake redmine:plugins:migrate NAME=redmine_ishare
