@@ -22,7 +22,7 @@ module RedmineIshare
 
         def read_authorize_ishare
           issue_id = @attachment.attributes['container_id'].to_s
-          if !session[:ishare].nil? && !issue_id.nil?
+          if !session[:ishare].nil? && !issue_id.nil? && !session[:ishare][issue_id]
             # @attachment.attributes['container_id']
             return true if  !session[:ishare][issue_id]['passed'].nil?
           end
